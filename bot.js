@@ -9,3 +9,16 @@ bot.onText(/\/start/, (msg) => {
 bot.sendMessage(msg.chat.id,
 "Hey, I'm a brand new Telegram bot. I live inside a Sanity tutorial.");
 });
+
+bot.onText(/^\/test/, async (msg) => {
+  bot.sendMessage(msg.from.id, "You want to play?", {
+    reply_markup: {
+      inline_keyboard: [
+        [
+          { text: "No", callback_data: "No" },
+          { text: "Yes", callback_data: "Yes" },
+        ],
+      ],
+    },
+  });
+});
