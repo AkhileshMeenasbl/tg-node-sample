@@ -16,7 +16,7 @@ bot.onText(/\/start/,(msg) => {
       inline_keyboard : [[
         {
           text : "Akhil",
-          web_app : {url : ""}
+          web_app : {url : "https://webappcontent.telegram.org/demo"}
         }
         ]]
     }
