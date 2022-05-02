@@ -8,9 +8,9 @@ const TOKEN = '5371616713:AAHEIGIg8eoxKXs66GJfK3xfcMFKTargGxs';
 //const TelegramBot = require('../..');
 const options = {
   webHook: {
-    port: process.env.PORT
+    //port: process.env.PORT
     //port: process.env.PORT || 8080
-    //port: process.env.PORT || 443
+    port: process.env.PORT || 443
   }
 };
 const url = process.env.APP_URL || 'https://tg-node-sample.herokuapp.com';
