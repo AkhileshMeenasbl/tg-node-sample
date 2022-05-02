@@ -9,7 +9,7 @@ const port = 80
 const crypto = new Crypto();
  
 const BOT_API_URL = "https://api.telegram.org/bot";
-const APP_BASE_URL = "https://damp-taiga-39486.herokuapp.com/"; // Used to tell bot what page to open
+const APP_BASE_URL = "https://tg-node-sample.herokuapp.com/"; // Used to tell bot what page to open
 
 // App logic
  
