@@ -11,7 +11,7 @@ app.use(express.static("express"));
 
 //METHOD 2
 // default URL for website
-app.use('/', function(req,res){
+app.use('/app', function(req,res){
     res.sendFile(path.join(__dirname+'/Public/simple.html'));
     //__dirname : It will resolve to your project folder.
   });
