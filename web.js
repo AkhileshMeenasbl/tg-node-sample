@@ -9,7 +9,7 @@ var app = express();
 app.use(express.json());
 app.use(express.static("express"));
 // default URL for website
-app.use('/app', function(req,res){
+app.use('/', function(req,res){
     res.sendFile(path.join(__dirname+'/Public/simple.html'));
     //__dirname : It will resolve to your project folder.
   });
@@ -19,13 +19,13 @@ server.listen(port);
 console.debug('Server listening on port ' + port);
 
 
-app.get('/', function (req, res) {
-  res.json({ version: packageInfo.version });
-});
+//app.get('/', function (req, res) {
+//  res.json({ version: packageInfo.version });
+//});
 
-var server = app.listen(process.env.PORT, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+//var server = app.listen(process.env.PORT, function () {
+//  var host = server.address().address;
+//  var port = server.address().port;
 
-  console.log('Web server started at http://%s:%s', host, port);
-});
+//  console.log('Web server started at http://%s:%s', host, port);
+//});
