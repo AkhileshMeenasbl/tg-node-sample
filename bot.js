@@ -5,7 +5,7 @@ const TOKEN = '5371616713:AAHEIGIg8eoxKXs66GJfK3xfcMFKTargGxs';
 const bot = new TelegramBot(TOKEN, {polling: true});
 
 // Variable
-const Welcome = "Hi i am Akhil's Bot."
+const Welcome = "Hi i am Akhil's Bot. make changes"
 
 // YOUR CODE STARTS HERE
 
@@ -15,7 +15,7 @@ bot.onText(/\/start/,(msg) => {
     reply_markup : {
       inline_keyboard : [[
         {
-          text : "Akhil",
+          text : "Akhil🤣🤣🤣",
           web_app : {url : "https://webappcontent.telegram.org/demo"}
         }
         ]]
