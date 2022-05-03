@@ -17,6 +17,9 @@ app.use('/original', function(req,res){
 app.use('/testing', function(req,res){
     res.sendFile(path.join(__dirname+'/Test/tgwebapp.html'));
   });
+app.use('/mahewa', function(req,res){
+    res.sendFile(path.join(__dirname+'/Mahewa/home.html'));
+  });
 
 app.get('/', function (req, res) {
   res.json({ version: packageInfo.version });
