@@ -5,20 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <!--meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="telephone=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="MobileOptimized" content="176" />
   <meta name="HandheldFriendly" content="True" />
-  <meta name="robots" content="noindex,nofollow" / -->
+  <meta name="robots" content="noindex,nofollow" />
   <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
-  <!--script>
+  <script>
     function setThemeClass() {
       document.documentElement.className = Telegram.WebApp.colorScheme;
     }
     Telegram.WebApp.onEvent('themeChanged', setThemeClass);
     setThemeClass();
 
-  </script -->
+  </script>
   <style>
     body {
       font-family: sans-serif;
@@ -35,32 +35,39 @@
 
 <body style="visibility: hidden;">
   <section>
+<!-- HEADER OF PAGE-->
+    <div class="Header-section"></div>
+<!-- FOOTER OF PAGE-->
+    <div class="Bottom-section">© AKHIL MEENA | 2022</div>
+<!-- CLOSE WEB PAGE BUTTON-->
     <button onclick="toggleMainButton(this);">Hide Main Button</button>
-    <div class="hint">
-      Theme params
-    </div>
   </section>
+  
+<!--WEB PAGE SWTTING-->
   <div class="viewport_border"></div>
   <div class="viewport_stable_border"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
-    /*Telegram.WebApp.ready();*/
+//THEME RELATED
+    Telegram.WebApp.ready();
 
-    /*var initData = Telegram.WebApp.initData || '';
-    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};*/
+    var initData = Telegram.WebApp.initData || '';
+    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
+    
+    Telegram.WebApp.onEvent('themeChanged', function () {
+      $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
+    });
 
+    /*$('#main_btn').toggle(!!initDataUnsafe.query_id);*/
+    $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
+    $('body').css('visibility', '');
+//THEME RELATED
+//close web page button
     function webviewClose() {
       Telegram.WebApp.close();
     }
-    
-    /*Telegram.WebApp.onEvent('themeChanged', function () {
-      $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    });*/
 
-    /*$('#main_btn').toggle(!!initDataUnsafe.query_id);*/
-    /*$('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));*/
-    $('body').css('visibility', '');
     Telegram.WebApp.MainButton
       .setText('CLOSE WEBVIEW 🙈')
       .show()
@@ -76,7 +83,7 @@
         el.innerHTML = 'Hide Main Button';
       }
     }
-
+//close web page button
   </script>
 </body>
 
