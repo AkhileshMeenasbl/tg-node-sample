@@ -66,6 +66,9 @@
 
     Telegram.WebApp.MainButton
       /*.textColor('rgb(199,55,229)')*/
+      .setParams({
+        color : "rgb(101,185,195)"
+      })
       .setText('🔙 To 🤖')
       .show()
       .onClick(function () { webviewClose(); });
