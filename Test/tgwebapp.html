@@ -51,40 +51,6 @@
     var initData = Telegram.WebApp.initData || '';
     var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
 
-    
-    function changeButton() {
-      $('button').prop('disabled', true);
-      $('#btn_status').text('Changing button...').removeClass('ok err').show();
-      $.ajax('/demo/changeMenuButton', {
-        type: 'POST',
-        data: { _auth: initData },
-        dataType: 'json',
-        success: function (result) {
-          $('button').prop('disabled', false);
-          if (result.response) {
-            if (result.response.ok) {
-              $('#btn_status').html('Button changed!').addClass('ok').show();
-              Telegram.WebApp.close();
-            } else {
-              $('#btn_status').text(result.response.description).addClass('err').show();
-              alert(result.response.description);
-            }
-          } else {
-            $('#btn_status').text('Unknown error').addClass('err').show();
-            alert('Unknown error');
-          }
-        },
-        error: function (xhr) {
-          $('button').prop('disabled', false);
-          $('#btn_status').text('Server error').addClass('err').show();
-          alert('Server error');
-        }
-      });
-      setTimeout(function () {
-        Telegram.WebApp.close();
-      }, 50);
-    }
-    
     function webviewClose() {
       Telegram.WebApp.close();
     }
