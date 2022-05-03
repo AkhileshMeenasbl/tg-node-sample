@@ -25,7 +25,7 @@ bot.onText(/\/start/,(msg) => {
         ],[
           {
             text : "Orinial ✅",
-            web_app : {url : "https://tg-node-sample.herokuapp.com/hamewa"}
+            web_app : {url : "https://tg-node-sample.herokuapp.com/mahewa"}
           }
         ]]
     }
