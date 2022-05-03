@@ -29,73 +29,23 @@
       padding: 0;
       color-scheme: var(--tg-color-scheme);
     };*/
+    body {
+      background-color: rgb(162,231,225);
+    }
     Headertt div.Header-section{
       font-family: sans-serif;
       background-color: #124de7;
+      background-size: 100%;
       width: device-width;
-      border: 15px solid green;
-      padding-top: 0px;
-      margin-top: 0px;
-      position: absolute;
-      top: 0px;
-      left: 0px;
+      Text-align: Center;
+    }
+    footerft div.Bottom-section{
+      font-family: sans-serif;
     }
   </style>
 
 </head>
-
-<body style="visibility: visible;">
-<!-- HEADER OF PAGE-->
-  <Headertt>
-    <div class="Header-section">Akhil'S Empire</div>
-  </Headertt>
-<!-- FOOTER OF PAGE-->
-  <div class="Bottom-section">© AKHIL MEENA | 2022</div>
-<!-- CLOSE WEB PAGE BUTTON-->
-  <button onclick="toggleMainButton(this);">Hide Main Button</button>
+<body>
   
-<!--WEB PAGE SWTTING-->
-  <div class="viewport_border"></div>
-  <div class="viewport_stable_border"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script>
-//THEME RELATED
-    Telegram.WebApp.ready();
-
-    var initData = Telegram.WebApp.initData || '';
-    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
-    
-    Telegram.WebApp.onEvent('themeChanged', function () {
-      $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    });
-
-    /*$('#main_btn').toggle(!!initDataUnsafe.query_id);*/
-    $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    $('body').css('visibility', 'visible');
-//THEME RELATED
-//close web page button
-    function webviewClose() {
-      Telegram.WebApp.close();
-    }
-
-    Telegram.WebApp.MainButton
-      .setText('CLOSE WEBVIEW 🙈')
-      .show()
-      .onClick(function () { webviewClose(); });
-
-    function toggleMainButton(el) {
-      var mainButton = Telegram.WebApp.MainButton;
-      if (mainButton.isVisible) {
-        mainButton.hide();
-        el.innerHTML = 'Show Main Button';
-      } else {
-        mainButton.show();
-        el.innerHTML = 'Hide Main Button';
-      }
-    }
-//close web page button
-  </script>
 </body>
-
 </html>
