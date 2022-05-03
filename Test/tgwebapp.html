@@ -36,33 +36,6 @@
 
 <body style="visibility: hidden;">
   <section>
-    <textarea id="text_field" rows="4"></textarea>
-    <button id="data_btn" onclick="sendText(true);">Send text to bot (x10)</button>
-    <button onclick="webviewExpand();">Expand Webview</button>
-    <button onclick="toggleMainButton(this);">Hide Main Button</button>
-    <input type="file" />
-    <div id="btn_status" class="hint" style="display: none;">
-    </div>
-    <p>Test links:</p>
-    <ul>
-      <li><a id="regular_link" href="?nextpage=1">Regular link #1</a> (opens inside webview)</li>
-      <li><a href="https://telegram.org/" target="_blank">target="_blank" link</a> (opens outside webview)</li>
-      <li><a href="javascript:window.open('https://telegram.org/');">window.open() link</a> (opens outside webview)</li>
-      <li><a href="https://t.me/like">LikeBot t.me link</a> (opens inside Telegram app)</li>
-      <li><a href="tg://resolve?domain=vote">VoteBot tg:// link</a> (does not open)</li>
-    </ul>
-    <p>Test permissions:</p>
-    <ul>
-      <li><a href="javascript:;" onclick="requestLocation(this);">Request Location</a> <span></span></li>
-      <li><a href="javascript:;" onclick="requestVideo(this);">Request Video</a> <span></span></li>
-      <li><a href="javascript:;" onclick="requestAudio(this);">Request Audio</a> <span></span></li>
-    </ul>
-    <pre><code id="webview_data"></code></pre>
-    <div class="hint">
-      Data passed to webview.
-      <span id="webview_data_status" style="display: none;">Checking hash...</span>
-    </div>
-    <pre><code id="theme_data"></code></pre>
     <div class="hint">
       Theme params
     </div>
