@@ -64,9 +64,9 @@
     // $('#data_btn').toggle(!initDataUnsafe.query_id || !initDataUnsafe.receiver);
     $('#webview_data').html(JSON.stringify(initDataUnsafe, null, 2));
     $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    /*$('body').css('visibility', '');*/
+    $('body').css('visibility', '');
     Telegram.WebApp.MainButton
-      .setText('CLOSE WEBVIEW')
+      .setText('CLOSE WEBVIEW 🙈')
       .show()
       .onClick(function () { webviewClose(); });
 
