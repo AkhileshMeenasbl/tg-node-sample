@@ -64,15 +64,12 @@
       Telegram.WebApp.close();
     }
 
-    Telegram.WebApp.MainButton.setParams({
-        text_color: 'rgba(227,40,51,0.922)',
-        color: 'rgb(157,183,242)'
-      })
+    Telegram.WebApp.MainButton
+      .textColor('rgb(199,55,229)')
       .setText('🔙 To 🤖')
       .show()
-      
       .onClick(function () { webviewClose(); });
-    
+      
 //close web page button
   </script>
 </body>
