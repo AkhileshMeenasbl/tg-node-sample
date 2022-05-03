@@ -29,7 +29,7 @@
       padding: 0;
       color-scheme: var(--tg-color-scheme);
     };
-    Headertt {
+    Headertt div.Header-section{
       font-family: sans-serif;
       background-color: rgba(38,221,222,0.975)
       /*background-color: lightgrey;*/
@@ -43,16 +43,14 @@
 </head>
 
 <body style="visibility: hidden;">
-  <section>
 <!-- HEADER OF PAGE-->
-    <Headertt>
-      <div class="Header-section">Akhil'S Empire</div>
-    </Headertt>
+  <Headertt>
+    <div class="Header-section">Akhil'S Empire</div>
+  </Headertt>
 <!-- FOOTER OF PAGE-->
-    <div class="Bottom-section">© AKHIL MEENA | 2022</div>
+  <div class="Bottom-section">© AKHIL MEENA | 2022</div>
 <!-- CLOSE WEB PAGE BUTTON-->
-    <button onclick="toggleMainButton(this);">Hide Main Button</button>
-  </section>
+  <button onclick="toggleMainButton(this);">Hide Main Button</button>
   
 <!--WEB PAGE SWTTING-->
   <div class="viewport_border"></div>
