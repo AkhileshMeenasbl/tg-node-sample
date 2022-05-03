@@ -19,7 +19,8 @@ bot.onText(/\/start/,(msg) => {
           web_app : {url : "https://tg-node-sample.herokuapp.com/original"}
         },{
           text : "Testing 🙈",
-          web_app : {url : "https://tg-node-sample.herokuapp.com/"}
+          //web_app : {url : "https://tg-node-sample.herokuapp.com/"}
+          web_app : {url : "https://www.careerlauncher.com/upsc/prelims-map-series/"}
         }
         ]]
     }
