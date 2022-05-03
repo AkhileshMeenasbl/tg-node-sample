@@ -24,19 +24,3 @@ bot.onText(/\/start/,(msg) => {
   );
 });
 
-
-//bot.onText(/\/start/, (msg) => {
-//  bot.sendMessage(msg.chat.id,
-//  "Hey, I'm a brand new Telegram bot. I live inside a Sanity tutorial.");
-//  {
-//    reply_markup : {
-//      inline_keyboard : [[
-//        {
-//          text : "Open Demo 🤣",
-//          web_app : {url : "https://webappcontent.telegram.org/demo"}
-//        }
-//        ]],
-//    }
-//  }
-//  });
-
