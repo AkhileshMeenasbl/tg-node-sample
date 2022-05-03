@@ -61,12 +61,9 @@
 
     $('#main_btn').toggle(!!initDataUnsafe.query_id);
     $('#with_webview_btn').toggle(!!initDataUnsafe.query_id && !initDataUnsafe.receiver);
-    // $('#data_btn').toggle(!initDataUnsafe.query_id || !initDataUnsafe.receiver);
     $('#webview_data').html(JSON.stringify(initDataUnsafe, null, 2));
     $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    /*$('#regular_link').attr('href', $('#regular_link').attr('href') + location.hash);
-    $('#text_field').focus();*/
-    if (initDataUnsafe.query_id && initData) {
+    /*if (initDataUnsafe.query_id && initData) {
       $('#webview_data_status').show();
       $.ajax('/demo/checkData', {
         type: 'POST',
@@ -83,7 +80,7 @@
           $('#webview_data_status').html('Server error').addClass('err');
         }
       });
-    }
+    }*/
     $('body').css('visibility', '');
     Telegram.WebApp.MainButton
       .setText('CLOSE WEBVIEW')
