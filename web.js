@@ -14,7 +14,7 @@ app.use('/original', function(req,res){
     //__dirname : It will resolve to your project folder.
   });
 
-app.use('/original', function(req,res){
+app.use('/testing', function(req,res){
     res.sendFile(path.join(__dirname+'/Test/tgwebapp.html'));
   });
 
