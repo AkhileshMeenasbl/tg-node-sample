@@ -58,9 +58,7 @@
       $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
     });
 
-    $('#main_btn').toggle(!!initDataUnsafe.query_id);
-    /*$('#with_webview_btn').toggle(!!initDataUnsafe.query_id && !initDataUnsafe.receiver);
-    $('#webview_data').html(JSON.stringify(initDataUnsafe, null, 2));*/
+    /*$('#main_btn').toggle(!!initDataUnsafe.query_id);*/
     $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
     $('body').css('visibility', '');
     Telegram.WebApp.MainButton
