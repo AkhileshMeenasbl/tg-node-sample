@@ -51,6 +51,35 @@
 <body>
   <script>
     Telegram.WebApp.ready();
+    
+    var initData = Telegram.WebApp.initData || '';
+    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
+    
+    Telegram.WebApp.onEvent('themeChanged', function () {
+      $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
+    });
+    
+//close web page button
+    function webviewClose() {
+      Telegram.WebApp.close();
+    }
+
+    Telegram.WebApp.MainButton
+      .setText('CLOSE WEBVIEW 🙈')
+      .show()
+      .onClick(function () { webviewClose(); });
+
+    function toggleMainButton(el) {
+      var mainButton = Telegram.WebApp.MainButton;
+      if (mainButton.isVisible) {
+        mainButton.hide();
+        el.innerHTML = 'Show Main Button';
+      } else {
+        mainButton.show();
+        el.innerHTML = 'Hide Main Button';
+      }
+    }
+//close web page button
   </script>
 </body>
 </html>
