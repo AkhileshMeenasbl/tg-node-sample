@@ -35,7 +35,7 @@
       padding: 0;
       font-size: 16px;
     }
-    Headertt div.Header-section{
+    Header-section div{
       font-family: sans-serif;
       background-color: #124de7;
       background-size: 100%;
@@ -49,6 +49,9 @@
 
 </head>
 <body>
+  <Header-section>
+    <div> Tg Web Test Bot ❤️ </div>
+  </Header-section>
   <script>
     Telegram.WebApp.ready();
     
@@ -65,11 +68,7 @@
     }
 
     Telegram.WebApp.MainButton
-      /*.textColor('rgb(199,55,229)')*/
-      .setParams({
-        color("rgb(101,185,195)")
-      })
-      .setText('🔙 To 🤖')
+      .setText('CLOSE ❌')
       .show()
       .onClick(function () { webviewClose(); });
       
