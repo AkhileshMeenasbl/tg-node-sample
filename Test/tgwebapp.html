@@ -54,41 +54,6 @@
     function webviewClose() {
       Telegram.WebApp.close();
     }
-    
-    Telegram.WebApp.onEvent('themeChanged', function () {
-      $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    });
-
-    $('#main_btn').toggle(!!initDataUnsafe.query_id);
-    $('#with_webview_btn').toggle(!!initDataUnsafe.query_id && !initDataUnsafe.receiver);
-    // $('#data_btn').toggle(!initDataUnsafe.query_id || !initDataUnsafe.receiver);
-    $('#webview_data').html(JSON.stringify(initDataUnsafe, null, 2));
-    $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    $('#regular_link').attr('href', $('#regular_link').attr('href') + location.hash);
-    $('#text_field').focus();
-    if (initDataUnsafe.query_id && initData) {
-      $('#webview_data_status').show();
-      $.ajax('/demo/checkData', {
-        type: 'POST',
-        data: { _auth: initData },
-        dataType: 'json',
-        success: function (result) {
-          if (result.ok) {
-            $('#webview_data_status').html('Hash is correct').addClass('ok');
-          } else {
-            $('#webview_data_status').html(result.error).addClass('err');
-          }
-        },
-        error: function (xhr) {
-          $('#webview_data_status').html('Server error').addClass('err');
-        }
-      });
-    }
-    $('body').css('visibility', '');
-    Telegram.WebApp.MainButton
-      .setText('CLOSE WEBVIEW')
-      .show()
-      .onClick(function () { webviewClose(); });
 
     function toggleMainButton(el) {
       var mainButton = Telegram.WebApp.MainButton;
