@@ -20,7 +20,7 @@
 
   </script>
   <style>
-    body {
+    /*body {
       font-family: sans-serif;
       background-color: var(--tg-theme-bg-color, rgb(247,166,166));
       color: var(--tg-theme-text-color, rgb(28,143,238));
@@ -28,11 +28,11 @@
       margin: 0;
       padding: 0;
       color-scheme: var(--tg-color-scheme);
-    };
+    };*/
     Headertt div.Header-section{
       font-family: sans-serif;
       background-color: rgba(38,221,222,0.975)
-      /*background-color: lightgrey;*/
+      background-color: lightgrey;
       width: 300px;
       border: 15px solid green;
       padding: 50px;
@@ -42,7 +42,7 @@
 
 </head>
 
-<body> <!-- style="visibility: visible;" -->
+<body style="visibility: visible;">
 <!-- HEADER OF PAGE-->
   <Headertt>
     <div class="Header-section">Akhil'S Empire</div>
@@ -70,7 +70,7 @@
 
     /*$('#main_btn').toggle(!!initDataUnsafe.query_id);*/
     $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    /*$('body').css('visibility', 'visible');*/
+    $('body').css('visibility', 'visible');
 //THEME RELATED
 //close web page button
     function webviewClose() {
