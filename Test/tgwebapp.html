@@ -47,19 +47,19 @@
   <script>
     /*Telegram.WebApp.ready();*/
 
-    var initData = Telegram.WebApp.initData || '';
-    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};
+    /*var initData = Telegram.WebApp.initData || '';
+    var initDataUnsafe = Telegram.WebApp.initDataUnsafe || {};*/
 
     function webviewClose() {
       Telegram.WebApp.close();
     }
     
-    Telegram.WebApp.onEvent('themeChanged', function () {
+    /*Telegram.WebApp.onEvent('themeChanged', function () {
       $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
-    });
+    });*/
 
     /*$('#main_btn').toggle(!!initDataUnsafe.query_id);*/
-    $('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));
+    /*$('#theme_data').html(JSON.stringify(Telegram.WebApp.themeParams, null, 2));*/
     $('body').css('visibility', '');
     Telegram.WebApp.MainButton
       .setText('CLOSE WEBVIEW 🙈')
