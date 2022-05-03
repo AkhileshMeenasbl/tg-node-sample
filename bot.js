@@ -15,8 +15,11 @@ bot.onText(/\/start/,(msg) => {
     reply_markup : {
       inline_keyboard : [[
         {
-          text : "Akhil🤣🤣🤣",
-          web_app : {url : "https://tg-node-sample.herokuapp.com/app"}
+          text : "Orinial ✅",
+          web_app : {url : "https://tg-node-sample.herokuapp.com/original"}
+        },{
+          text : "Testing 🙈",
+          web_app : {url : "https://tg-node-sample.herokuapp.com/"}
         }
         ]]
     }
