@@ -140,13 +140,18 @@
     }
     /*SEARCH MOVIE BAR*/
     /*STYLING OUR MOVIES*/
-    SearchBox{
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    main{
       width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
-    SearchBox div{
+    main div{
       width: 250px;
       height: 320px;
       margin: 19px 15px;
@@ -197,6 +202,7 @@
       <input type="text" id="search" placeholder="Search Movie Name...." class="search"/>
     </form>
   </SearchBox>
+  <main id="main"></main>
   <!-- FOOTER -->
   <footer class="Footer">
     <div class="TaglineF">
@@ -234,7 +240,7 @@
     const SEARCHAPI =
       "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 // Selecting our Elements.
-    const SearchBox = document.getElementById("SearchBox");
+    const main = document.getElementById("main");
     const form = document.getElementById("forms");
     const search = document.getElementById("search");
 /* call the showMovies function that requests the movie data from the Api using fetch.
@@ -256,7 +262,7 @@
           image.src = IMGPATH + element.poster_path;
           el.appendChild(image);
           el.appendChild(text);
-          SearchBox.appendChild(el);
+          main.appendChild(el);
         });
       });
     }
