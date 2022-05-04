@@ -46,14 +46,21 @@
       border-radius: 5px;
       border: 1px solid rgba(43, 43, 43, 0.568);
       overflow: hidden;
+      text-align: center;
     }
     .wrapper div#Header-section {
       font-size: 20px;
       color: white;
       font-weight: bold;
       font-family: Trattatello;
-      text-align: center;
       text-shadow: 2px 2px 4px #000000;
+    }
+    .wrapper .HeaderAreaText,
+    .wrapper .HeaderAreaButton{
+      display: inline-block;
+    }
+    .wrapper .HeaderAreaButton{
+      color: red;
     }
     /*Header*/
     /*Footer*/
@@ -78,7 +85,8 @@
 </head>
 <body>
   <div class="wrapper">
-    <div id="Header-section">HD MOVIES CINEMA 😘</div>
+    <div id="Header-section" class="HeaderAreaText">HD MOVIES CINEMA 😘</div>
+    <button role="button" class="HeaderAreaButton">Join Now</button>
   </div>
   <footer class="Footer">
     <div class="TaglineF">
