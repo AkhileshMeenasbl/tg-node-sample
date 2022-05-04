@@ -30,30 +30,29 @@
       color-scheme: var(--tg-color-scheme);
     };*/
     body {
-      background: url("https://github.com/AkhileshMeenasbl/tg-node-sample/blob/0d1280e504478fcb734b81555f924cf6df8ab3cf/images%20(2).jpeg");
-      /*background-color: rgb(162,231,225);*/
+      background-image: url('https://telegra.ph/file/0862e7f147257e0b6da59.jpg');
       margin: 0;
       padding: 0;
       font-size: 16px;
+      background-repeat: no-repeat;
     }
     /*Header*/
-    Header-section div{
-      font-family: sans-serif;
-      background-color: rgb(45,237,227);
-      background-size: 100%;
-      width: device-width;
-      Text-align: Center;
+    .wrapper {
+      /*height: 320px;*/
+      width: 100%;
+      background: rgba(255,255,255,0.091);
+      backdrop-filter: blur(0.15px);
+      border-radius: 5px;
+      border: 1px solid rgba(43, 43, 43, 0.568);
+      overflow: hidden;
     }
-    Header-section div#HeaderLine{
+    .wrapper div#Header-section {
+      Text-align: Center;
+      font: cursive;
       color: white;
       width: device-width;
       Text-align: Center;
       padding: 5px;
-    }
-    Header-section span.Title_Name{
-      background: #e61e1e;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
     /*Header*/
     /*Footer*/
@@ -73,9 +72,9 @@
 
 </head>
 <body>
-  <Header-section>
-    <div id="HeaderLine"><span class="Title_Name">HD MOVIES CINEMA</span> <span>@Hd_Movies_Cinema</span></div>
-  </Header-section>
+  <div class="wrapper">
+    <div id="Header-section"><span class="Title_Name" color="red">HD MOVIES CINEMA</span> <span> | @Hd_Movies_Cinema</span></div>
+  </div>
   <footer class="Footer">
     <p class="TaglineF">
       Made In 🇮🇳 With ❤️
