@@ -129,6 +129,20 @@
     }
     
     /*Header*/
+    /*SEARCH MOVIE BAR*/
+    SearchBox form#forms{
+      align-items: center;
+      display: flex;
+    }
+    #search{
+      width: 230px;
+      height: 30px;
+      border: 1px solid black;
+      outline: none;
+      border-radius: 20px;
+      padding-left: 15px;
+    }
+    /*SEARCH MOVIE BAR*/
     /*Footer*/
     .Footer {
       position: fixed;
@@ -150,10 +164,18 @@
 
 </head>
 <body>
+  <!-- HEADER WITH BUTTON -->
   <div class="wrapper">
     <div id="Header-section" class="HeaderAreaText">HD MOVIES CINEMA 😘</div>
     <button role="button" class="HeaderAreaButton" onclick="location.href='https://t.me/hd_movies_cinema'">Join Now</button>
   </div>
+  <!-- SEARCH BOX -->
+  <SearchBox>
+    <form id="forms">
+      <input type="text" id="search" placeholder="Search Movie Name...." class="search"/>
+    </form>
+  </SearchBox>
+  <!-- FOOTER -->
   <footer class="Footer">
     <div class="TaglineF">
       Made In 🇮🇳 With ❤️
