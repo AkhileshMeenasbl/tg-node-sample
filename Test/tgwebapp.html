@@ -314,6 +314,18 @@
         search.value = "";
       }
     });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      main.innerHTML = '';
+     
+      const searchTerm = search.value;
+ /* Adding the value wriiten in the search bar to the search Api,
+    in order to get the movies we search for. */
+      if (searchTerm) {
+        showMovies(SEARCHAPI + searchTerm);
+        search.value = "";
+      }
+    });
   </script>
 </body>
 </html>
