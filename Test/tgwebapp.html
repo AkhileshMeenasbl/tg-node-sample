@@ -231,7 +231,7 @@
     <form id="forms" class="SEACHBOXS">
       <input type="text" id="search" placeholder="Search Movie Name...." class="search"/>
     </form>
-    <button class="SEARCHBUTTON" role="button">🔍</button>
+    <button id="SearchBt" class="SEARCHBUTTON" role="button">🔍</button>
   </SearchBox>
   <p class="SEARCHTIPS">Tips: Type of your fav. movie name and press the search button or hit enter</p>
   </div>
@@ -301,7 +301,7 @@
     }
 
 // Prevent the Form from submitting if the search bar is empty.
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("SearchBt", (e) => {
       e.preventDefault();
       main.innerHTML = '';
      
