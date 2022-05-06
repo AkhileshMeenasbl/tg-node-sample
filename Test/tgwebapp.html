@@ -138,6 +138,13 @@
       border-radius: 20px;
       padding-left: 50px;
     }
+    .SEARCHPANNEL{
+      border: 2px solid black;
+      text-align: center;
+    }
+    .SEACHBOXS,.SEARCHBUTTON{
+      display: inline-block;
+    }
     /*SEARCH MOVIE BAR*/
     /*STYLING OUR MOVIES*/
     *{
@@ -197,11 +204,15 @@
     <button role="button" class="HeaderAreaButton" onclick="location.href='https://t.me/hd_movies_cinema'">Join Now</button>
   </div>
   <!-- SEARCH BOX -->
+  <div class="SEARCHPANNEL">
   <SearchBox>
-    <form id="forms">
+    <form id="forms" class="SEACHBOXS">
       <input type="text" id="search" placeholder="Search Movie Name...." class="search"/>
     </form>
+    <button class="SEARCHBUTTON" role="button">🔍</button>
   </SearchBox>
+  <p>Tips: Type of your fav. movie name and press the search button or hit enter</p>
+  </div>
   <main id="main"></main>
   <!-- FOOTER -->
   <footer class="Footer">
