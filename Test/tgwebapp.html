@@ -131,19 +131,39 @@
     /*Header*/
     /*SEARCH MOVIE BAR*/
     #search{
-      width: 230px;
+      width: 200px;
       height: 30px;
       border: 1px solid black;
       outline: none;
       border-radius: 20px;
-      padding-left: 50px;
+      padding-left: 20px;
+      background-color: rgba(171,238,246,0.54);
     }
     .SEARCHPANNEL{
-      border: 2px solid black;
+      border: 0.2px solid black;
       text-align: center;
+      background-color: transparent;
+      backdrop-filter: blur(10px);
+      margin-top: 50px;
+      margin-left: 5%;
+      margin-right: 5%;
+      border-radius: 15px;
+    }
+    .SEARCHBUTTON{
+      background-color: red;
+    }
+    .SEARCHTIPS{
+      color: transparent;
+      text-shadow: 10px;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: white;
+      font-size: 12px;
+      padding: 10px;
+      font-family: Times New Roman;
     }
     .SEACHBOXS,.SEARCHBUTTON{
       display: inline-block;
+      margin-top: 10px;
     }
     /*SEARCH MOVIE BAR*/
     /*STYLING OUR MOVIES*/
@@ -211,7 +231,7 @@
     </form>
     <button class="SEARCHBUTTON" role="button">🔍</button>
   </SearchBox>
-  <p>Tips: Type of your fav. movie name and press the search button or hit enter</p>
+  <p class="SEARCHTIPS">Tips: Type of your fav. movie name and press the search button or hit enter</p>
   </div>
   <main id="main"></main>
   <!-- FOOTER -->
