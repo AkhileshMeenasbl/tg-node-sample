@@ -301,7 +301,8 @@
     }
 
 // Prevent the Form from submitting if the search bar is empty.
-    SearchBt.addEventListener("click", (e) => {
+    const elementt = document.getElementById("SearchBt");
+    elementt.addEventListener("click", (e) => {
       e.preventDefault();
       main.innerHTML = '';
      
